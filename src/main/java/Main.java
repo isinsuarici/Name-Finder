@@ -21,7 +21,7 @@ public class Main {
 
         String str= String.valueOf(doc);
 
-//*************Sentence detector model****************
+//*************Sentence detector model**************
 
         //Loading sentence detector model
         InputStream inputStream = new FileInputStream("src\\main\\resources\\en-sent.bin");
@@ -36,7 +36,7 @@ public class Main {
         for (String sentence : sentences) {
             st.append(sentence);
         }
-        //*************Tokenizer model************************
+        //*************Tokenizer model******************
 
         //Loading the Tokenizer model
         InputStream inputStream2 = new FileInputStream("src\\main\\resources\\en-token.bin");
@@ -47,7 +47,7 @@ public class Main {
         //Tokenizing the given text
         String[] tokens = tokenizer.tokenize(st.toString());
 
-//*************Name finder model***********************
+//*************Name finder model*********************
 
         //Loading the Name Finder model
         InputStream inputStreamNameFinder = new FileInputStream("src\\main\\resources\\en-ner-person.bin");
